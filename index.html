@@ -1,149 +1,211 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIDPL | Company Profile</title>
 
+<link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a1f44, #0f2f66, #0a1f44);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 22px;
+    padding: 35px 25px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.logo {
+    width: 110px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 22px;
+    color: #0a1f44;
+    font-weight: 600;
+}
+
+.tagline {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Section layout */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-decoration: none;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #0a1f44, #143d82);
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn i {
+    width: 20px;
+    text-align: center;
+}
+
+/* QR container */
+.qr-box {
+    background: #f4f6fb;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.qr-img {
+    width: 110px;
+    height: 110px;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .section {
+        flex-direction: column;
     }
 
-    body {
-        background: linear-gradient(135deg, #0b2d5c, #123d7a);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+    .qr-box {
+        margin-top: 8px;
     }
-
-    .container {
-        width: 100%;
-        max-width: 420px;
-        padding: 30px 20px;
-        text-align: center;
-    }
-
-    .card {
-        background: white;
-        padding: 30px 20px;
-        border-radius: 18px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    }
-
-    .logo {
-        width: 110px;
-        margin-bottom: 15px;
-    }
-
-    h1 {
-        font-size: 22px;
-        color: #0b2d5c;
-    }
-
-    .tagline {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 25px;
-    }
-
-    .link-box {
-        margin-bottom: 25px;
-    }
-
-    .btn {
-        display: block;
-        text-decoration: none;
-        padding: 14px;
-        border-radius: 10px;
-        font-size: 15px;
-        font-weight: 500;
-        background: #0b2d5c;
-        color: white;
-        margin-bottom: 10px;
-    }
-
-    .qr {
-        width: 90px;
-        margin: 0 auto;
-    }
-
-    .footer {
-        margin-top: 15px;
-        font-size: 12px;
-        color: #888;
-    }
+}
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
     <div class="card">
-        <img src="logo.png" class="logo" alt="DIDPL Logo">
 
-        <h1>Dholera Infra Development</h1>
-        <div class="tagline">Premium Land & Infrastructure Projects</div>
+```
+    <img src="logo.png" class="logo" alt="DIDPL Logo">
+    <h1>Dholera Infra Development</h1>
+    <div class="tagline"><i>Confidence In Every Investment</i></div>
 
-        <!-- Website -->
-        <div class="link-box">
-            <a class="btn" href="https://didpl.com" target="_blank">
-                Visit Website
-            </a>
-            <div id="qr-website" class="qr"></div>
-        </div>
-
-        <!-- WhatsApp -->
-        <div class="link-box">
-            <a class="btn" href="https://wa.me/916353817643" target="_blank">
-                WhatsApp Enquiry
-            </a>
-            <div id="qr-whatsapp" class="qr"></div>
-        </div>
-
-        <!-- Instagram -->
-        <div class="link-box">
-            <a class="btn" href="https://www.instagram.com/dholera_didpl/" target="_blank">
-                Instagram
-            </a>
-            <div id="qr-instagram" class="qr"></div>
-        </div>
-
-        <div class="footer">
-            © DIDPL
-            <p>didpl ka kaam hai</p>
+    <!-- Website -->
+    <div class="section">
+        <a class="btn" href="https://didpl.com" target="_blank">
+            <i class="fa-solid fa-globe"></i> Visit Website
+        </a>
+        <div class="qr-box">
+            <img src="website-qr-code.png" class="qr-img">
         </div>
     </div>
+
+    <!-- WhatsApp Community -->
+    <div class="section">
+        <a class="btn" href="https://whatsapp.com/channel/0029VbAicbOKbYMSF3qVVC2f" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Community
+        </a>
+        <div class="qr-box">
+            <img src="whatsapp_channel-qr-code.png" class="qr-img">
+        </div>
+    </div>
+
+    <!-- Call -->
+    <div class="section">
+        <a class="btn" href="tel:8866909600">
+            <i class="fa-solid fa-phone"></i> Call: 88669 09600
+        </a>
+        <div class="qr-box">
+            <img src="call-qr-code.png" class="qr-img">
+        </div>
+    </div>
+
+    <!-- WhatsApp Chat -->
+    <div class="section">
+        <a class="btn" href="https://wa.me/918866909600" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+        </a>
+        <div class="qr-box">
+            <img src="whatsapp-qr-code.png" class="qr-img">
+        </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="section">
+        <a class="btn" href="https://www.instagram.com/dholera_didpl/" target="_blank">
+            <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <div class="qr-box">
+            <img src="insta-qr-code.png" class="qr-img">
+        </div>
+    </div>
+
+    <!-- Facebook -->
+    <div class="section">
+        <a class="btn" href="https://www.facebook.com/dholerainfradevelopment/" target="_blank">
+            <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <div class="qr-box">
+            <img src="fb-qr-code.png" class="qr-img">
+        </div>
+    </div>
+
+    <div class="footer">
+        © DIDPL
+    </div>
+
 </div>
+```
 
-<!-- QR Code Library -->
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-
-<script>
-    new QRCode(document.getElementById("qr-website"), {
-        text: "https://example.com",
-        width: 90,
-        height: 90
-    });
-
-    new QRCode(document.getElementById("qr-whatsapp"), {
-        text: "https://wa.me/916353817643",
-        width: 90,
-        height: 90
-    });
-
-    new QRCode(document.getElementById("qr-instagram"), {
-        text: "https://www.instagram.com/dholera_didpl/",
-        width: 90,
-        height: 90
-    });
-</script>
+</div>
 
 </body>
 </html>
